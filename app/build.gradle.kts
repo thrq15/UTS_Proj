@@ -1,4 +1,4 @@
-plugins {
+ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     id("com.google.gms.google-services")
@@ -64,6 +64,8 @@ dependencies {
     implementation ("com.google.firebase:firebase-auth:21.0.1")
 
     implementation("com.squareup.picasso:picasso:2.8")
+    implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("androidx.recyclerview:recyclerview:1.3.2")
 
     // Glide untuk memuat gambar
     implementation ("com.github.bumptech.glide:glide:4.12.0")

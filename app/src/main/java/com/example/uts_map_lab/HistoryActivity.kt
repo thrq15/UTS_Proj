@@ -1,5 +1,6 @@
 package com.example.uts_map_lab
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -13,13 +14,14 @@ class HistoryActivity : AppCompatActivity() {
     private lateinit var historyAdapter: HistoryAdapter
     private val historyList = mutableListOf<HistoryItem>()
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_history)
 
         // Inisialisasi Firestore dan RecyclerView
         firestore = FirebaseFirestore.getInstance()
-        recyclerViewHistory = findViewById(R.id.recyclerViewHistory)
+        recyclerViewHistory = findViewById(R.id.imageViewPhoto)
         recyclerViewHistory.layoutManager = LinearLayoutManager(this)
 
         // Buat Adapter dan set ke RecyclerView
@@ -36,7 +38,7 @@ class HistoryActivity : AppCompatActivity() {
             .addOnSuccessListener { documents ->
                 // Jika berhasil mengambil data
                 for (document in documents) {
-                    val photoUrl = document.getString("photoUrl") ?: ""
+                    val photoUrl = document.getString("https://firebasestorage.googleapis.com/v0/b/uts-map-lab-a3f5c.appspot.com/o/attendance_photos%2FPgoFL6MWg9U7vgnPg6RwgfLIC0T2_20241024_091635.jpg?alt=media&token=2a44878a-1d1e-4160-a6db-6038b73a775d") ?: ""
                     val timestamp = document.getString("timestamp") ?: ""
 
                     // Tambahkan data ke list

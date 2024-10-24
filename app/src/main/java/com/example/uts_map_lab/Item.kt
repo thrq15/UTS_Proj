@@ -1,4 +1,8 @@
 package com.example.uts_map_lab
 
-class Item {
-}
+import com.google.firebase.auth.ActionCodeUrl
+import java.net.URL
+
+data class Item(
+    var imageUrl: String
+)
