@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">UTS Map Lab</string>
+    <!-- String baru untuk deskripsi foto -->
+    <string name="photo_desc">Photo from history</string>
+</resources>
